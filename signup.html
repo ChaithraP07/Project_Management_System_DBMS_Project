@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up Page</title>
+	<style>
+		body {
+			background-image: url('background2.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		img {
+			border-radius: 50px;
+			margin-left: 10px;
+			margin-top: 10px;
+		}
+		ul
+		{
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			display: inline-block;
+		}
+		li a {
+			display: inline-block;
+			color: black;
+			text-decoration: none;
+			padding: 17px;
+			text-transform: capitalize;
+			font-size: 25px;
+			background-color: white;
+			margin: 40px;
+			border-radius: 35px;
+		}
+		div {
+			float: left;
+		}
+		.menu {
+			margin-left: 50px;
+			margin-top: -15px;
+		}
+		.active {
+			background-color: rgb(146, 255, 207);
+			border-bottom: 7px solid red;
+			color: black;
+			text-transform: uppercase;
+		}
+		li a:hover:not(.active) {
+			background-color: black;
+			border-bottom: 5px solid white;
+			color: white;
+			border-top: 2px solid white;
+			border-right: 2px solid white;
+			border-left: 2px solid white;
+		}
+		.login {
+			background-color: rgba(0,0,0,0.3);
+			display: inline-block;
+			width: 500px;
+			height: 500px;
+			margin-top: 40px;
+			margin-left: 500px;
+		}
+		.logo {
+			margin-left: 170px;
+			margin-top: 30px;
+		}
+		form {
+			margin-top: 20px;
+		}
+		input {
+			width: 250px;
+			padding: 15px;
+			margin-left: 100px;
+			border-radius: 25px;
+			text-transform: uppercase;
+			font-size: 15px;
+			text-align: center;
+			font-weight: bold;
+
+		}
+		input[type="text"] {
+			margin-bottom: 20px;
+			background-color: white;
+
+		}
+		input[type="password"] {
+			margin-bottom: 20px;
+			background-color: white;
+		}
+		input[type="submit"] {
+			color: black;
+			margin-left: 190px;
+			width: 120px;
+			background-color: rgb(92, 206, 194);
+		}
+		input[type="submit"]:hover {
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+<div>
+<img src="logo.jpg" width="100" height="100">
+</div>
+<div class="menu">
+<ul>
+	<li><a href="home.html">home</a></li>
+	<li><a href="admin.html">admin</a></li>
+	<li><a href="login.html">login</a></li>
+	<li><a class="active" href="signup.html">sign up</a></li>
+</ul>
+</div>
+	<div class="login">
+		<img class="logo" src="llogo.png" width="150" height="150">
+		<form action="sign.php" method="post">
+			<label for="usn-id"></label>
+			<input type="text" id="usn-id" name="usn-id" placeholder="usn/id" required><br>
+			<label for="passwd"></label>
+			<input type="password" id="passwd" name="passwd" placeholder="password" required><br>
+			<label for="repasswd"></label>
+			<input type="password" id="repasswd" name="repasswd" placeholder="re-enter password" required>
+			<input type="submit" name="submit">
+		</form>
+	</div>
+</body>
+</html>
